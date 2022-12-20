@@ -1,0 +1,30 @@
+// LAYOUT
+.header__navDesktop {
+  margin-top: 70px;
+  display: flex;
+  display: none;
+  align-items: center;
+  .nav__a {
+    margin-left: 20px;
+  }
+}
+
+// LAYOUT IN MEDIA
+@media screen and (min-width: 860px) {
+  .header__navDesktop {
+    display: block;
+  }
+}
+
+// STYLING
+.header__navDesktop--style {
+  .nav__a {
+    text-decoration: none;
+    color: $color5;
+    font-size: 20px;
+  }
+  .nav__a:hover {
+    color: $color2;
+    transition: 0.5s;
+  }
+}
