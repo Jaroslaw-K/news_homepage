@@ -1,0 +1,33 @@
+@import "./NavMobileButton/NavMobileButton.scss";
+@import "./NavDesktop/NavDesktop.scss";
+// LAYOUT
+.header {
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  .header__logo {
+    display: inline-block;
+    margin-top: 25px;
+  }
+}
+
+// LAYOUT IN MEDIA
+@media screen and (min-width: 860px) {
+  .header {
+    .header__logo {
+      margin-top: 50px;
+    }
+    .header__navDesktop {
+      display: block;
+    }
+  }
+}
+
+// STYLING
+.header {
+  background-color: $color3;
+  .header__logo {
+    font-weight: 800;
+    font-size: 50px;
+  }
+}
