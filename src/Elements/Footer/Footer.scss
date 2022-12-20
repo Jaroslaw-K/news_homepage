@@ -1,0 +1,95 @@
+// LAYOUT
+.footer {
+  width: 90vw;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  .footer__article {
+    height: 180px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 40px;
+    .article__img {
+      width: 35%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    .article__txt {
+      margin-left: 20px;
+      width: 65%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
+
+// LAYOUT IN MEDIA
+@media screen and (min-width: 860px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    .footer__article {
+      width: 25%;
+      margin-bottom: 0;
+    }
+  }
+}
+
+// STYLING
+.footer--style {
+  .footer__article--first {
+    .article__img {
+      background: url("/src/assets/image-retro-pcs.jpg");
+    }
+  }
+  .footer__article--second {
+    .article__img {
+      background: url("/src/assets/image-top-laptops.jpg");
+    }
+  }
+  .footer__article--third {
+    .article__img {
+      background: url("/src/assets/image-gaming-growth.jpg");
+    }
+  }
+  .footer__article {
+    .article__txt {
+      .txt__nr {
+        font-size: 40px;
+        color: $color5;
+      }
+      .txt__link {
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+        transition: 0.5s;
+        -webkit-tap-highlight-color: transparent;
+      }
+      @media (hover: none) and (any-pointer: coarse) {
+        .txt__link:active {
+          color: $color2;
+        }
+      }
+      .txt__txt {
+        font-size: 18px;
+        color: $color5;
+      }
+    }
+  }
+}
+
+// STYLING IN MEDIA
+@media screen and (min-width: 860px) {
+  .footer--style {
+    .footer__article {
+      .txt__link:hover {
+        color: $color2;
+      }
+    }
+  }
+}
