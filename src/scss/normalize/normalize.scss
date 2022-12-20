@@ -1,0 +1,10 @@
+@import "../variables/variables.scss";
+
+// NORMALIZE
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: $font;
+}
