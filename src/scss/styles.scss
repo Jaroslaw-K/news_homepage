@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+@import "./normalize/normalize.scss";
+@import "./variables/variables.scss";
+// PAGE PARTS
+@import "../Elements/NavMobile/NavMobile.scss";
+@import "../Elements/Header/Header.scss";
+@import "../Elements/Main/Main.scss";
+@import "../Elements//Footer/Footer.scss";
+
+// LAYOUT
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+//STYLING
+.body--style {
+  background-color: $color3;
+  .attribution--style {
+    font-size: 11px;
+    text-align: center;
+    a {
+      color: hsl(228, 45%, 44%);
+    }
+  }
+}
