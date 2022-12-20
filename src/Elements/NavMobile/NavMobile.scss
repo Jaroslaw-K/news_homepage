@@ -1,0 +1,88 @@
+// LAYOUT
+.navMobile {
+  position: absolute;
+  right: -100%;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  overflow: hidden;
+  touch-action: none;
+  .navMobile__leftContainer {
+    width: 30%;
+    height: 100%;
+  }
+  .navMobile__rightContainer {
+    width: 70%;
+    height: 100%;
+    position: relative;
+    .rightContainer__nav {
+      top: 30%;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+// STYLING
+.navMobile--style {
+  .navMobile__leftContainer {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .navMobile__rightContainer {
+    background-color: $color3;
+    .rightContainer__nav {
+      .nav__a {
+        margin-left: 20px;
+        margin-top: 20px;
+        text-decoration: none;
+        color: $color5;
+        font-size: 16px;
+        -webkit-tap-highlight-color: transparent;
+        transition: 0.5s;
+      }
+      .nav__a:hover {
+        color: $color2;
+      }
+      @media (hover: none) and (any-pointer: coarse) {
+        .nav__a:active {
+          color: $color2;
+        }
+      }
+    }
+  }
+}
+
+// CLASSES FOR ANIMATIONS
+.navMobile--open {
+  display: flex;
+  animation-name: navOpen;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.navMobile--close {
+  display: flex;
+  animation-name: navClose;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+// NAV ANIMATIONS
+@keyframes navOpen {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes navClose {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -100%;
+  }
+}
