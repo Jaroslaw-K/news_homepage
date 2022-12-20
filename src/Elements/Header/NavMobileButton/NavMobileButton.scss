@@ -1,0 +1,158 @@
+// LAYOUT
+.header__navMobileButton {
+  margin-top: 40px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+  .navMobileButton__line {
+    width: 50px;
+    height: 3px;
+  }
+}
+
+// LAYOUT IN MEDIA
+@media screen and (min-width: 860px) {
+  .header__navMobileButton {
+    display: none;
+  }
+}
+
+// STYLING
+.header__navMobileButton--style {
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  .navMobileButton__line {
+    background-color: $color6;
+  }
+}
+
+// CLASSES FOR ANIMATION
+.header__navMobileButton--open {
+  .navMobileButton__line--top {
+    position: relative;
+    animation-name: topLineOpen;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0;
+  }
+  .navMobileButton__line--middle {
+    position: relative;
+    animation-name: middleLineOpen;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0;
+  }
+  .navMobileButton__line--bottom {
+    position: relative;
+    animation-name: bottomLineOpen;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0;
+  }
+}
+
+.header__navMobileButton--close {
+  .navMobileButton__line--top {
+    position: relative;
+    animation-name: topLineClose;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0;
+  }
+  .navMobileButton__line--middle {
+    position: relative;
+    animation-name: middleLineClose;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.25s;
+    opacity: 0;
+  }
+  .navMobileButton__line--bottom {
+    position: relative;
+    animation-name: bottomLineClose;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0;
+  }
+}
+
+// ANIMATION
+@keyframes topLineOpen {
+  0% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  50% {
+    top: 45%;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 45%;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes middleLineOpen {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bottomLineOpen {
+  0% {
+    bottom: 0;
+    transform: rotate(0deg);
+  }
+  50% {
+    bottom: 45%;
+    transform: rotate(0deg);
+  }
+  100% {
+    bottom: 45%;
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes topLineClose {
+  0% {
+    top: 45%;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 45%;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes middleLineClose {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bottomLineClose {
+  0% {
+    bottom: 45%;
+    transform: rotate(-45deg);
+  }
+  50% {
+    bottom: 45%;
+    transform: rotate(0deg);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(0deg);
+  }
+}
