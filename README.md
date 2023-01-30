@@ -1,4 +1,4 @@
-# TITLE PAGE OF NEWS PAGE WEBSITE
+# PROJECT OF NEWS WEBSITE TITLE PAGE
 Project created based on sources which references are located file sources.txt :
 https://github.com/Jaroslaw-K/news_homepage/blob/main/sources.txt
 
